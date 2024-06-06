@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #fff; /* Le fond du header est blanc */
+    color: #fff; /* Le texte dans le header est également blanc, ce qui peut rendre le texte invisible */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Les éléments dans le header sont espacés également */
+    align-items: center; /* Les éléments sont alignés au centre verticalement */
+}
+
+.logo img {
+    width: 181px; /* Taille du logo */
+    height: auto; /* La hauteur s'ajuste automatiquement pour conserver les proportions */
+}
+
+nav ul {
+    list-style: none; /* Retire les puces de la liste */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline; /* Les éléments de la liste sont affichés en ligne */
+    margin-left: 27px; /* Espacement entre les icônes */
+}
+
+nav ul li a img {
+    width: 30px; /* Taille des icônes */
+    height: auto; /* La hauteur s'ajuste automatiquement pour conserver les proportions */
+}
+
+.promo-bar {
+    background-color: #fd9f8a; /* Couleur de fond de la barre promotionnelle */
+    color: #fff; /* Couleur du texte de la barre promotionnelle */
+    text-align: center; /* Le texte est centré */
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute; /* La barre reste en haut de la page même lors du défilement */
+    top: 139px; /* Place la barre promotionnelle juste en dessous du header */
+    width: 100%; /* La barre occupe toute la largeur de l'écran */
+    z-index: 1000; /* Assure que la barre est au-dessus des autres éléments */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour donner de la profondeur */
+}
+
+.promo-text {
+    display: inline-block;
+    white-space: nowrap; /* Le texte ne se découpe pas en plusieurs lignes */
+    animation: scrollText 20s linear infinite; /* Le texte défile de manière continue */
+}
+
+.promo-bar a {
+    color: #fff; /* Couleur des liens dans la barre promotionnelle */
+    margin-left: 10px;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%); /* Commence hors de l'écran à droite */
+    }
+    100% {
+        transform: translateX(-100%); /* Finit hors de l'écran à gauche */
+    }
+}
